@@ -1,0 +1,11 @@
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\bin\Debug\WinFormsRiotAPI.exe.config
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\bin\Debug\WinFormsRiotAPI.exe
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\bin\Debug\WinFormsRiotAPI.pdb
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.csproj.AssemblyReference.cache
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.MainForm.resources
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.Properties.Resources.resources
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.UserControls.inputControlBox.resources
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.csproj.GenerateResource.cache
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.csproj.CoreCompileInputs.cache
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.exe
+C:\Users\al579882\Documents\GitHub\Riot-API\Riot API\WinFormsRiotAPI\obj\Debug\WinFormsRiotAPI.pdb

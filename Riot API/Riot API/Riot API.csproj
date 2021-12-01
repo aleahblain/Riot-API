@@ -6,4 +6,8 @@
     <RootNamespace>Riot_API</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MingweiSamuel.Camille" Version="2.8.0" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JHZqs7W4uNe2+e1cOagYl8mAn83jDsxIvKySd6Ux6+Z4HyKsDMIWjFEfvw3fyAguiGIsSrb/m2T1FYAwA5n+OQ==",
+  "dgSpecHash": "pqERsv85nPXz0EK84HaomlotdoTevQvIDCP/1zoTxvbFUY3xzukmG6CgqNhFTjgDj3UqZl7IoYZQXPdVIH6Sow==",
   "success": true,
   "projectFilePath": "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\al579882\\.nuget\\packages\\mingweisamuel.camille\\2.8.0\\mingweisamuel.camille.2.8.0.nupkg.sha512"
+  ],
   "logs": []
 }
