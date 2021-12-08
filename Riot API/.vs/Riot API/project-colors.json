@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "826e778d-6110-4246-a43f-97b1eddd62ee": {
+      "ProjectGuid": "826e778d-6110-4246-a43f-97b1eddd62ee",
+      "DisplayName": "WinFormsRiotAPI",
+      "ColorIndex": 0
+    },
+    "25743787-8679-4d6d-aa0f-033679cc8361": {
+      "ProjectGuid": "25743787-8679-4d6d-aa0f-033679cc8361",
+      "DisplayName": "Riot API",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

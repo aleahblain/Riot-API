@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "pqERsv85nPXz0EK84HaomlotdoTevQvIDCP/1zoTxvbFUY3xzukmG6CgqNhFTjgDj3UqZl7IoYZQXPdVIH6Sow==",
+  "dgSpecHash": "7mrz+Mqkh4aPsCuHMqVyJVvvGdp4MkFMK26qLnO5Av3H+/g3UbjWLLS0zHVdjS6zUO6J2UOqYDMR6Di4zhZStQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
+  "projectFilePath": "C:\\Users\\Sansw\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\al579882\\.nuget\\packages\\mingweisamuel.camille\\2.8.0\\mingweisamuel.camille.2.8.0.nupkg.sha512"
+    "C:\\Users\\Sansw\\.nuget\\packages\\mingweisamuel.camille\\2.8.0\\mingweisamuel.camille.2.8.0.nupkg.sha512",
+    "C:\\Users\\Sansw\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
+    "C:\\Users\\Sansw\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sansw\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Sansw\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj": {}
+    "C:\\Users\\Sansw\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj": {
+    "C:\\Users\\Sansw\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
+        "projectUniqueName": "C:\\Users\\Sansw\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
         "projectName": "Riot API",
-        "projectPath": "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
-        "packagesPath": "C:\\Users\\al579882\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\al579882\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\obj\\",
+        "projectPath": "C:\\Users\\Sansw\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\Riot API.csproj",
+        "packagesPath": "C:\\Users\\Sansw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sansw\\Documents\\GitHub\\Riot-API\\Riot API\\Riot API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\al579882\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sansw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -62,12 +59,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.12, 5.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
