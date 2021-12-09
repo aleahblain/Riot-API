@@ -7,10 +7,11 @@ using MingweiSamuel.Camille.SummonerV4;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using MingweiSamuel.Camille.Enums;
+using System.Runtime.Serialization;
 
 namespace WinFormsRiotAPI
 {
-    public partial class MainForm : Form
+    public partial class RiotAPI : Form
     {
         private RiotApi API;
         private Match match;
@@ -20,12 +21,10 @@ namespace WinFormsRiotAPI
 
         internal string APIKey { get; set; }
         private string summonerName;
-        private string summonerPUUID;
-        private string summonerAccID;
         private string matchID;
         
 
-        public MainForm()
+        public RiotAPI()
         {
             InitializeComponent();
         }
@@ -43,11 +42,7 @@ namespace WinFormsRiotAPI
         }
 
 
-        private void summerNameInputTB_TextChanged(object sender, EventArgs e) => summonerName = summerNameInputTB.Text;
-
-        private void summonerIDTB_TextChanged(object sender, EventArgs e) => summonerPUUID = summonerIDTB.Text;
-
-        private void summonerAccIDTB_TextChanged(object sender, EventArgs e) => summonerAccID = summonerAccIDTB.Text;
+        private void summerNameInputTB_TextChanged(object sender, EventArgs e) => summonerName = summerNameInputTB.Text;   
     
         private void summonerInputButton_Click(object sender, EventArgs e)
         {
@@ -55,18 +50,7 @@ namespace WinFormsRiotAPI
         }
         void RetrieveSummonerInfo()
         {
-            //API = RiotApi.NewInstance(APIKey);
-            if (summonerName != null)
-            {
-                summoner = API.SummonerV4.GetBySummonerName(MingweiSamuel.Camille.Enums.Region.NA, summonerName);
-            } else if (summonerPUUID != null)
-            {
-                summoner = API.SummonerV4.GetBySummonerName(MingweiSamuel.Camille.Enums.Region.NA, summonerPUUID);
-            } else
-            {
-                summoner = API.SummonerV4.GetBySummonerName(MingweiSamuel.Camille.Enums.Region.NA, summonerAccID);
-            }
-            
+            summoner = API.SummonerV4.GetBySummonerName(MingweiSamuel.Camille.Enums.Region.NA, summonerName);
             retrievedSummonerID.Text = summoner.Id;
             retrievedSummonerAccID.Text = summoner.AccountId;
             retrievedSummonerPUUID.Text = summoner.Puuid;
@@ -81,48 +65,72 @@ namespace WinFormsRiotAPI
             }
         }
 
-        private void matchIDButton_Click(object sender, EventArgs e) => matchID = matchIDTB.Text;
+        private void matchIDTB_TextChanged(object sender, EventArgs e) => matchID = matchIDTB.Text;
+
+        private void matchIDButton_Click(object sender, EventArgs e)
+        {
+            RetrieveMatchInfo();
+        }
 
         void RetrieveMatchInfo()
         {
-            match = API.MatchV5.GetMatch(MingweiSamuel.Camille.Enums.Region.Americas, matchIDTB.Text);
-            foreach(KeyValuePair<string, object> entry in match._AdditionalProperties)
+            match = API.MatchV5.GetMatch(MingweiSamuel.Camille.Enums.Region.Americas, matchID);
+            foreach (KeyValuePair<string, object> entry in match._AdditionalProperties)
             {
-                if(entry.Key == "info")
+                if (entry.Key == "info")
                 {
                     matchData = (dynamic)JsonConvert.DeserializeObject<MatchData>(entry.Value.ToString());
                 }
             }
 
             retrievedMatchTypeTB.Text = matchData.gameType;
-            retreievedMatchTime.Text = $"{matchData.gameDuration}";
+            retrievedMatchTimeTB.Text = $"{matchData.gameDuration}";
 
-            foreach(ExtraSummonerInfo summoner in matchData.summoners)
-            {
-                matchData.DivideTeams(summoner);
+            int counter = 0;
+
+            foreach (ExtraSummonerInfo summoner in matchData.participants)
+            {   
+                if(counter < 5)
+                {
+                    teamOneListBox.Items.Add(summoner.championName);
+                } else
+                {
+                    teamTwoListBox.Items.Add(summoner.championName);
+                }
+                counter++;
             }
 
         }
 
         private void teamOneListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedSummoner = (ExtraSummonerInfo)teamOneListBox.SelectedItem;
-            teamOneSummonerNameTB.Text = selectedSummoner.summonerName;
-            teamOneChampNameTB.Text = selectedSummoner.championName;
-            teamOneKillsTB.Text = $"{selectedSummoner.kills}";
-            teamOneDeathsTB.Text = $"{selectedSummoner.deaths}";
-            teamOneAssistsTB.Text = $"{selectedSummoner.assists}";
-            
+            foreach(ExtraSummonerInfo summoner in matchData.participants)
+            {
+                if(summoner.championName.Equals(teamOneListBox.SelectedItem))
+                {
+                    teamOneLaneTB.Text = summoner.lane;
+                    teamOneChampNameTB.Text = summoner.championName;
+                    teamOneKillsTB.Text = $"{summoner.kills}";
+                    teamOneDeathsTB.Text = $"{summoner.deaths}";
+                    teamOneAssistsTB.Text = $"{summoner.assists}";
+                }
+            }
+             
         }
 
         private void teamTwoListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedSummoner = (ExtraSummonerInfo)teamOneListBox.SelectedItem;
-            teamTwoSummonerNameTB.Text = selectedSummoner.summonerName;
-            teamTwoChampNameTB.Text = selectedSummoner.championName;
-            teamTwoKillsTB.Text = $"{selectedSummoner.kills}";
-            teamTwoDeathsTB.Text = $"{selectedSummoner.deaths}";
-            teamTwoAssistsTB.Text = $"{selectedSummoner.assists}";
+            foreach (ExtraSummonerInfo summoner in matchData.participants)
+            {
+                if (summoner.championName.Equals(teamTwoListBox.SelectedItem))
+                {
+                    teamTwoLaneTB.Text = summoner.lane;
+                    teamTwoChampNameTB.Text = summoner.championName;
+                    teamTwoKillsTB.Text = $"{summoner.kills}";
+                    teamTwoDeathsTB.Text = $"{summoner.deaths}";
+                    teamTwoAssistsTB.Text = $"{summoner.assists}";
+                }
+            }
         }
 
         private void champRotationButton_Click(object sender, EventArgs e)
@@ -141,6 +149,11 @@ namespace WinFormsRiotAPI
             {
                 champRotationNewPlayerLB.Items.Add((Champion) championID);
             }
+        }
+
+        private void riotDeveloperPortalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://developer.riotgames.com/");
         }
     }
 }

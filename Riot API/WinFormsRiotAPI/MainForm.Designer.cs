@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormsRiotAPI
 {
-    partial class MainForm
+    partial class RiotAPI
     {
         /// <summary>
         /// Required designer variable.
@@ -49,24 +49,18 @@ namespace WinFormsRiotAPI
             this.retrievedSummonerID = new System.Windows.Forms.TextBox();
             this.summonerInformationIDLabel = new System.Windows.Forms.Label();
             this.summonerGroupBox = new System.Windows.Forms.GroupBox();
-            this.summonerAccIDTB = new System.Windows.Forms.TextBox();
-            this.summonerIDTB = new System.Windows.Forms.TextBox();
             this.summerNameInputTB = new System.Windows.Forms.TextBox();
             this.summonerInputButton = new System.Windows.Forms.Button();
-            this.accountIDLabel = new System.Windows.Forms.Label();
-            this.puuidLabel = new System.Windows.Forms.Label();
             this.summerNameLabel = new System.Windows.Forms.Label();
             this.matchTabPage = new System.Windows.Forms.TabPage();
             this.retreivedMatchInfoGB = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.retrievedMatchTimeTB = new System.Windows.Forms.TextBox();
             this.retreievedMatchTime = new System.Windows.Forms.Label();
             this.retrievedMatchTypeTB = new System.Windows.Forms.TextBox();
             this.retrievedMatchTypeLabel = new System.Windows.Forms.Label();
             this.teamTwoGroupBox = new System.Windows.Forms.GroupBox();
             this.teamTwoAssistsTB = new System.Windows.Forms.TextBox();
-            this.teamTwoSurrenderCheck = new System.Windows.Forms.CheckBox();
             this.teamTwoDeathsTB = new System.Windows.Forms.TextBox();
-            this.teamTwoWinCheck = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.teamTwoListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,7 +68,7 @@ namespace WinFormsRiotAPI
             this.teamTwoKillsTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.teamTwoSummonerNameTB = new System.Windows.Forms.TextBox();
+            this.teamTwoLaneTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.teamOneGroupBox = new System.Windows.Forms.GroupBox();
             this.teamOneAssistsTB = new System.Windows.Forms.TextBox();
@@ -85,28 +79,26 @@ namespace WinFormsRiotAPI
             this.teamOneKillsLabel = new System.Windows.Forms.Label();
             this.teamOneChampNameTB = new System.Windows.Forms.TextBox();
             this.teamOneChampNameLabel = new System.Windows.Forms.Label();
-            this.teamOneSummonerNameTB = new System.Windows.Forms.TextBox();
-            this.teamOneSummonerNameLabel = new System.Windows.Forms.Label();
-            this.teamOneSurrenderCheck = new System.Windows.Forms.CheckBox();
-            this.teamOneWinCheck = new System.Windows.Forms.CheckBox();
+            this.teamOneLaneTB = new System.Windows.Forms.TextBox();
+            this.teamOneLaneLabel = new System.Windows.Forms.Label();
             this.teamOneListBox = new System.Windows.Forms.ListBox();
             this.matchGroupBox = new System.Windows.Forms.GroupBox();
             this.matchIDTB = new System.Windows.Forms.TextBox();
             this.matchIDButton = new System.Windows.Forms.Button();
             this.matchIDLabel = new System.Windows.Forms.Label();
             this.championTabPage = new System.Windows.Forms.TabPage();
+            this.champRotationNewPlayerGB = new System.Windows.Forms.GroupBox();
+            this.champRotationNewPlayerLB = new System.Windows.Forms.ListBox();
+            this.champRotationGB = new System.Windows.Forms.GroupBox();
+            this.champRotationLB = new System.Windows.Forms.ListBox();
+            this.championsGB = new System.Windows.Forms.GroupBox();
+            this.champRotationButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aPIKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riotDeveloperPortalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.championsGB = new System.Windows.Forms.GroupBox();
-            this.champRotationButton = new System.Windows.Forms.Button();
-            this.champRotationGB = new System.Windows.Forms.GroupBox();
-            this.champRotationNewPlayerGB = new System.Windows.Forms.GroupBox();
-            this.champRotationLB = new System.Windows.Forms.ListBox();
-            this.champRotationNewPlayerLB = new System.Windows.Forms.ListBox();
             this.tabControl.SuspendLayout();
             this.summonerTabPage.SuspendLayout();
             this.summonerInfroGroupBox.SuspendLayout();
@@ -117,10 +109,10 @@ namespace WinFormsRiotAPI
             this.teamOneGroupBox.SuspendLayout();
             this.matchGroupBox.SuspendLayout();
             this.championTabPage.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.championsGB.SuspendLayout();
-            this.champRotationGB.SuspendLayout();
             this.champRotationNewPlayerGB.SuspendLayout();
+            this.champRotationGB.SuspendLayout();
+            this.championsGB.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -303,12 +295,8 @@ namespace WinFormsRiotAPI
             // 
             // summonerGroupBox
             // 
-            this.summonerGroupBox.Controls.Add(this.summonerAccIDTB);
-            this.summonerGroupBox.Controls.Add(this.summonerIDTB);
             this.summonerGroupBox.Controls.Add(this.summerNameInputTB);
             this.summonerGroupBox.Controls.Add(this.summonerInputButton);
-            this.summonerGroupBox.Controls.Add(this.accountIDLabel);
-            this.summonerGroupBox.Controls.Add(this.puuidLabel);
             this.summonerGroupBox.Controls.Add(this.summerNameLabel);
             this.summonerGroupBox.Location = new System.Drawing.Point(30, 18);
             this.summonerGroupBox.Name = "summonerGroupBox";
@@ -317,25 +305,9 @@ namespace WinFormsRiotAPI
             this.summonerGroupBox.TabStop = false;
             this.summonerGroupBox.Text = "&Get A Summoner By...";
             // 
-            // summonerAccIDTB
-            // 
-            this.summonerAccIDTB.Location = new System.Drawing.Point(453, 45);
-            this.summonerAccIDTB.Name = "summonerAccIDTB";
-            this.summonerAccIDTB.Size = new System.Drawing.Size(142, 20);
-            this.summonerAccIDTB.TabIndex = 11;
-            this.summonerAccIDTB.TextChanged += new System.EventHandler(this.summonerAccIDTB_TextChanged);
-            // 
-            // summonerIDTB
-            // 
-            this.summonerIDTB.Location = new System.Drawing.Point(240, 45);
-            this.summonerIDTB.Name = "summonerIDTB";
-            this.summonerIDTB.Size = new System.Drawing.Size(142, 20);
-            this.summonerIDTB.TabIndex = 9;
-            this.summonerIDTB.TextChanged += new System.EventHandler(this.summonerIDTB_TextChanged);
-            // 
             // summerNameInputTB
             // 
-            this.summerNameInputTB.Location = new System.Drawing.Point(16, 45);
+            this.summerNameInputTB.Location = new System.Drawing.Point(238, 45);
             this.summerNameInputTB.Name = "summerNameInputTB";
             this.summerNameInputTB.Size = new System.Drawing.Size(142, 20);
             this.summerNameInputTB.TabIndex = 7;
@@ -343,7 +315,7 @@ namespace WinFormsRiotAPI
             // 
             // summonerInputButton
             // 
-            this.summonerInputButton.Location = new System.Drawing.Point(240, 95);
+            this.summonerInputButton.Location = new System.Drawing.Point(240, 93);
             this.summonerInputButton.Name = "summonerInputButton";
             this.summonerInputButton.Size = new System.Drawing.Size(142, 35);
             this.summonerInputButton.TabIndex = 6;
@@ -351,28 +323,10 @@ namespace WinFormsRiotAPI
             this.summonerInputButton.UseVisualStyleBackColor = true;
             this.summonerInputButton.Click += new System.EventHandler(this.summonerInputButton_Click);
             // 
-            // accountIDLabel
-            // 
-            this.accountIDLabel.AutoSize = true;
-            this.accountIDLabel.Location = new System.Drawing.Point(491, 29);
-            this.accountIDLabel.Name = "accountIDLabel";
-            this.accountIDLabel.Size = new System.Drawing.Size(61, 13);
-            this.accountIDLabel.TabIndex = 5;
-            this.accountIDLabel.Text = "Account ID";
-            // 
-            // puuidLabel
-            // 
-            this.puuidLabel.AutoSize = true;
-            this.puuidLabel.Location = new System.Drawing.Point(290, 29);
-            this.puuidLabel.Name = "puuidLabel";
-            this.puuidLabel.Size = new System.Drawing.Size(41, 13);
-            this.puuidLabel.TabIndex = 3;
-            this.puuidLabel.Text = "PUUID";
-            // 
             // summerNameLabel
             // 
             this.summerNameLabel.AutoSize = true;
-            this.summerNameLabel.Location = new System.Drawing.Point(46, 29);
+            this.summerNameLabel.Location = new System.Drawing.Point(260, 29);
             this.summerNameLabel.Name = "summerNameLabel";
             this.summerNameLabel.Size = new System.Drawing.Size(88, 13);
             this.summerNameLabel.TabIndex = 1;
@@ -392,7 +346,7 @@ namespace WinFormsRiotAPI
             // 
             // retreivedMatchInfoGB
             // 
-            this.retreivedMatchInfoGB.Controls.Add(this.textBox1);
+            this.retreivedMatchInfoGB.Controls.Add(this.retrievedMatchTimeTB);
             this.retreivedMatchInfoGB.Controls.Add(this.retreievedMatchTime);
             this.retreivedMatchInfoGB.Controls.Add(this.retrievedMatchTypeTB);
             this.retreivedMatchInfoGB.Controls.Add(this.retrievedMatchTypeLabel);
@@ -405,21 +359,21 @@ namespace WinFormsRiotAPI
             this.retreivedMatchInfoGB.TabStop = false;
             this.retreivedMatchInfoGB.Text = "&Retrieved Match Information";
             // 
-            // textBox1
+            // retrievedMatchTimeTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(310, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 23;
+            this.retrievedMatchTimeTB.Location = new System.Drawing.Point(372, 28);
+            this.retrievedMatchTimeTB.Name = "retrievedMatchTimeTB";
+            this.retrievedMatchTimeTB.Size = new System.Drawing.Size(114, 20);
+            this.retrievedMatchTimeTB.TabIndex = 23;
             // 
             // retreievedMatchTime
             // 
             this.retreievedMatchTime.AutoSize = true;
             this.retreievedMatchTime.Location = new System.Drawing.Point(237, 31);
             this.retreievedMatchTime.Name = "retreievedMatchTime";
-            this.retreievedMatchTime.Size = new System.Drawing.Size(66, 13);
+            this.retreievedMatchTime.Size = new System.Drawing.Size(129, 13);
             this.retreievedMatchTime.TabIndex = 22;
-            this.retreievedMatchTime.Text = "Match Time:";
+            this.retreievedMatchTime.Text = "Match Time (miliseconds):";
             // 
             // retrievedMatchTypeTB
             // 
@@ -440,9 +394,7 @@ namespace WinFormsRiotAPI
             // teamTwoGroupBox
             // 
             this.teamTwoGroupBox.Controls.Add(this.teamTwoAssistsTB);
-            this.teamTwoGroupBox.Controls.Add(this.teamTwoSurrenderCheck);
             this.teamTwoGroupBox.Controls.Add(this.teamTwoDeathsTB);
-            this.teamTwoGroupBox.Controls.Add(this.teamTwoWinCheck);
             this.teamTwoGroupBox.Controls.Add(this.label1);
             this.teamTwoGroupBox.Controls.Add(this.teamTwoListBox);
             this.teamTwoGroupBox.Controls.Add(this.label2);
@@ -450,14 +402,14 @@ namespace WinFormsRiotAPI
             this.teamTwoGroupBox.Controls.Add(this.teamTwoKillsTB);
             this.teamTwoGroupBox.Controls.Add(this.label5);
             this.teamTwoGroupBox.Controls.Add(this.label3);
-            this.teamTwoGroupBox.Controls.Add(this.teamTwoSummonerNameTB);
+            this.teamTwoGroupBox.Controls.Add(this.teamTwoLaneTB);
             this.teamTwoGroupBox.Controls.Add(this.label4);
             this.teamTwoGroupBox.Location = new System.Drawing.Point(310, 61);
             this.teamTwoGroupBox.Name = "teamTwoGroupBox";
             this.teamTwoGroupBox.Size = new System.Drawing.Size(302, 219);
             this.teamTwoGroupBox.TabIndex = 19;
             this.teamTwoGroupBox.TabStop = false;
-            this.teamTwoGroupBox.Text = "&Team Two";
+            this.teamTwoGroupBox.Text = "&Losers";
             // 
             // teamTwoAssistsTB
             // 
@@ -466,32 +418,12 @@ namespace WinFormsRiotAPI
             this.teamTwoAssistsTB.Size = new System.Drawing.Size(44, 20);
             this.teamTwoAssistsTB.TabIndex = 44;
             // 
-            // teamTwoSurrenderCheck
-            // 
-            this.teamTwoSurrenderCheck.AutoSize = true;
-            this.teamTwoSurrenderCheck.Location = new System.Drawing.Point(199, 68);
-            this.teamTwoSurrenderCheck.Name = "teamTwoSurrenderCheck";
-            this.teamTwoSurrenderCheck.Size = new System.Drawing.Size(90, 17);
-            this.teamTwoSurrenderCheck.TabIndex = 17;
-            this.teamTwoSurrenderCheck.Text = "Surrendered?";
-            this.teamTwoSurrenderCheck.UseVisualStyleBackColor = true;
-            // 
             // teamTwoDeathsTB
             // 
             this.teamTwoDeathsTB.Location = new System.Drawing.Point(138, 188);
             this.teamTwoDeathsTB.Name = "teamTwoDeathsTB";
             this.teamTwoDeathsTB.Size = new System.Drawing.Size(45, 20);
             this.teamTwoDeathsTB.TabIndex = 43;
-            // 
-            // teamTwoWinCheck
-            // 
-            this.teamTwoWinCheck.AutoSize = true;
-            this.teamTwoWinCheck.Location = new System.Drawing.Point(199, 45);
-            this.teamTwoWinCheck.Name = "teamTwoWinCheck";
-            this.teamTwoWinCheck.Size = new System.Drawing.Size(101, 17);
-            this.teamTwoWinCheck.TabIndex = 16;
-            this.teamTwoWinCheck.Text = "Winning Team?";
-            this.teamTwoWinCheck.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -539,9 +471,9 @@ namespace WinFormsRiotAPI
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(7, 139);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 35;
-            this.label5.Text = "Summoner Name:";
+            this.label5.Text = "Lane:";
             // 
             // label3
             // 
@@ -552,12 +484,12 @@ namespace WinFormsRiotAPI
             this.label3.TabIndex = 39;
             this.label3.Text = "Kills:";
             // 
-            // teamTwoSummonerNameTB
+            // teamTwoLaneTB
             // 
-            this.teamTwoSummonerNameTB.Location = new System.Drawing.Point(104, 136);
-            this.teamTwoSummonerNameTB.Name = "teamTwoSummonerNameTB";
-            this.teamTwoSummonerNameTB.Size = new System.Drawing.Size(114, 20);
-            this.teamTwoSummonerNameTB.TabIndex = 36;
+            this.teamTwoLaneTB.Location = new System.Drawing.Point(104, 136);
+            this.teamTwoLaneTB.Name = "teamTwoLaneTB";
+            this.teamTwoLaneTB.Size = new System.Drawing.Size(114, 20);
+            this.teamTwoLaneTB.TabIndex = 36;
             // 
             // label4
             // 
@@ -578,17 +510,15 @@ namespace WinFormsRiotAPI
             this.teamOneGroupBox.Controls.Add(this.teamOneKillsLabel);
             this.teamOneGroupBox.Controls.Add(this.teamOneChampNameTB);
             this.teamOneGroupBox.Controls.Add(this.teamOneChampNameLabel);
-            this.teamOneGroupBox.Controls.Add(this.teamOneSummonerNameTB);
-            this.teamOneGroupBox.Controls.Add(this.teamOneSummonerNameLabel);
-            this.teamOneGroupBox.Controls.Add(this.teamOneSurrenderCheck);
-            this.teamOneGroupBox.Controls.Add(this.teamOneWinCheck);
+            this.teamOneGroupBox.Controls.Add(this.teamOneLaneTB);
+            this.teamOneGroupBox.Controls.Add(this.teamOneLaneLabel);
             this.teamOneGroupBox.Controls.Add(this.teamOneListBox);
             this.teamOneGroupBox.Location = new System.Drawing.Point(6, 61);
             this.teamOneGroupBox.Name = "teamOneGroupBox";
             this.teamOneGroupBox.Size = new System.Drawing.Size(298, 219);
             this.teamOneGroupBox.TabIndex = 18;
             this.teamOneGroupBox.TabStop = false;
-            this.teamOneGroupBox.Text = "&Team One";
+            this.teamOneGroupBox.Text = "&Winners";
             // 
             // teamOneAssistsTB
             // 
@@ -654,41 +584,21 @@ namespace WinFormsRiotAPI
             this.teamOneChampNameLabel.TabIndex = 26;
             this.teamOneChampNameLabel.Text = "Champion Name:";
             // 
-            // teamOneSummonerNameTB
+            // teamOneLaneTB
             // 
-            this.teamOneSummonerNameTB.Location = new System.Drawing.Point(101, 133);
-            this.teamOneSummonerNameTB.Name = "teamOneSummonerNameTB";
-            this.teamOneSummonerNameTB.Size = new System.Drawing.Size(114, 20);
-            this.teamOneSummonerNameTB.TabIndex = 25;
+            this.teamOneLaneTB.Location = new System.Drawing.Point(101, 133);
+            this.teamOneLaneTB.Name = "teamOneLaneTB";
+            this.teamOneLaneTB.Size = new System.Drawing.Size(114, 20);
+            this.teamOneLaneTB.TabIndex = 25;
             // 
-            // teamOneSummonerNameLabel
+            // teamOneLaneLabel
             // 
-            this.teamOneSummonerNameLabel.AutoSize = true;
-            this.teamOneSummonerNameLabel.Location = new System.Drawing.Point(4, 136);
-            this.teamOneSummonerNameLabel.Name = "teamOneSummonerNameLabel";
-            this.teamOneSummonerNameLabel.Size = new System.Drawing.Size(91, 13);
-            this.teamOneSummonerNameLabel.TabIndex = 24;
-            this.teamOneSummonerNameLabel.Text = "Summoner Name:";
-            // 
-            // teamOneSurrenderCheck
-            // 
-            this.teamOneSurrenderCheck.AutoSize = true;
-            this.teamOneSurrenderCheck.Location = new System.Drawing.Point(197, 68);
-            this.teamOneSurrenderCheck.Name = "teamOneSurrenderCheck";
-            this.teamOneSurrenderCheck.Size = new System.Drawing.Size(90, 17);
-            this.teamOneSurrenderCheck.TabIndex = 16;
-            this.teamOneSurrenderCheck.Text = "Surrendered?";
-            this.teamOneSurrenderCheck.UseVisualStyleBackColor = true;
-            // 
-            // teamOneWinCheck
-            // 
-            this.teamOneWinCheck.AutoSize = true;
-            this.teamOneWinCheck.Location = new System.Drawing.Point(197, 45);
-            this.teamOneWinCheck.Name = "teamOneWinCheck";
-            this.teamOneWinCheck.Size = new System.Drawing.Size(101, 17);
-            this.teamOneWinCheck.TabIndex = 15;
-            this.teamOneWinCheck.Text = "Winning Team?";
-            this.teamOneWinCheck.UseVisualStyleBackColor = true;
+            this.teamOneLaneLabel.AutoSize = true;
+            this.teamOneLaneLabel.Location = new System.Drawing.Point(4, 136);
+            this.teamOneLaneLabel.Name = "teamOneLaneLabel";
+            this.teamOneLaneLabel.Size = new System.Drawing.Size(34, 13);
+            this.teamOneLaneLabel.TabIndex = 24;
+            this.teamOneLaneLabel.Text = "Lane:";
             // 
             // teamOneListBox
             // 
@@ -713,14 +623,15 @@ namespace WinFormsRiotAPI
             // 
             // matchIDTB
             // 
-            this.matchIDTB.Location = new System.Drawing.Point(239, 47);
+            this.matchIDTB.Location = new System.Drawing.Point(240, 45);
             this.matchIDTB.Name = "matchIDTB";
             this.matchIDTB.Size = new System.Drawing.Size(142, 20);
             this.matchIDTB.TabIndex = 13;
+            this.matchIDTB.TextChanged += new System.EventHandler(this.matchIDTB_TextChanged);
             // 
             // matchIDButton
             // 
-            this.matchIDButton.Location = new System.Drawing.Point(238, 92);
+            this.matchIDButton.Location = new System.Drawing.Point(240, 93);
             this.matchIDButton.Name = "matchIDButton";
             this.matchIDButton.Size = new System.Drawing.Size(142, 35);
             this.matchIDButton.TabIndex = 12;
@@ -731,7 +642,7 @@ namespace WinFormsRiotAPI
             // matchIDLabel
             // 
             this.matchIDLabel.AutoSize = true;
-            this.matchIDLabel.Location = new System.Drawing.Point(278, 31);
+            this.matchIDLabel.Location = new System.Drawing.Point(280, 29);
             this.matchIDLabel.Name = "matchIDLabel";
             this.matchIDLabel.Size = new System.Drawing.Size(51, 13);
             this.matchIDLabel.TabIndex = 1;
@@ -750,6 +661,62 @@ namespace WinFormsRiotAPI
             this.championTabPage.Text = "Champion V3";
             this.championTabPage.UseVisualStyleBackColor = true;
             // 
+            // champRotationNewPlayerGB
+            // 
+            this.champRotationNewPlayerGB.Controls.Add(this.champRotationNewPlayerLB);
+            this.champRotationNewPlayerGB.Location = new System.Drawing.Point(351, 137);
+            this.champRotationNewPlayerGB.Name = "champRotationNewPlayerGB";
+            this.champRotationNewPlayerGB.Size = new System.Drawing.Size(297, 353);
+            this.champRotationNewPlayerGB.TabIndex = 5;
+            this.champRotationNewPlayerGB.TabStop = false;
+            this.champRotationNewPlayerGB.Text = "Free Champion Rotation For Players < Level 10";
+            // 
+            // champRotationNewPlayerLB
+            // 
+            this.champRotationNewPlayerLB.FormattingEnabled = true;
+            this.champRotationNewPlayerLB.Location = new System.Drawing.Point(16, 20);
+            this.champRotationNewPlayerLB.Name = "champRotationNewPlayerLB";
+            this.champRotationNewPlayerLB.Size = new System.Drawing.Size(264, 316);
+            this.champRotationNewPlayerLB.TabIndex = 1;
+            // 
+            // champRotationGB
+            // 
+            this.champRotationGB.Controls.Add(this.champRotationLB);
+            this.champRotationGB.Location = new System.Drawing.Point(30, 137);
+            this.champRotationGB.Name = "champRotationGB";
+            this.champRotationGB.Size = new System.Drawing.Size(297, 353);
+            this.champRotationGB.TabIndex = 4;
+            this.champRotationGB.TabStop = false;
+            this.champRotationGB.Text = "Free Champion Rotation";
+            // 
+            // champRotationLB
+            // 
+            this.champRotationLB.FormattingEnabled = true;
+            this.champRotationLB.Location = new System.Drawing.Point(15, 20);
+            this.champRotationLB.Name = "champRotationLB";
+            this.champRotationLB.Size = new System.Drawing.Size(264, 316);
+            this.champRotationLB.TabIndex = 0;
+            // 
+            // championsGB
+            // 
+            this.championsGB.Controls.Add(this.champRotationButton);
+            this.championsGB.Location = new System.Drawing.Point(30, 18);
+            this.championsGB.Name = "championsGB";
+            this.championsGB.Size = new System.Drawing.Size(618, 96);
+            this.championsGB.TabIndex = 3;
+            this.championsGB.TabStop = false;
+            this.championsGB.Text = "&Get Frree Champion Rotation";
+            // 
+            // champRotationButton
+            // 
+            this.champRotationButton.Location = new System.Drawing.Point(226, 34);
+            this.champRotationButton.Name = "champRotationButton";
+            this.champRotationButton.Size = new System.Drawing.Size(142, 35);
+            this.champRotationButton.TabIndex = 12;
+            this.champRotationButton.Text = ">>";
+            this.champRotationButton.UseVisualStyleBackColor = true;
+            this.champRotationButton.Click += new System.EventHandler(this.champRotationButton_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -764,8 +731,8 @@ namespace WinFormsRiotAPI
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem,
-            this.aPIKeyToolStripMenuItem});
+            this.aPIKeyToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -797,73 +764,21 @@ namespace WinFormsRiotAPI
             this.riotDeveloperPortalToolStripMenuItem.Name = "riotDeveloperPortalToolStripMenuItem";
             this.riotDeveloperPortalToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.riotDeveloperPortalToolStripMenuItem.Text = "&Riot Developer Portal...";
+            this.riotDeveloperPortalToolStripMenuItem.Click += new System.EventHandler(this.riotDeveloperPortalToolStripMenuItem_Click);
             // 
-            // championsGB
-            // 
-            this.championsGB.Controls.Add(this.champRotationButton);
-            this.championsGB.Location = new System.Drawing.Point(30, 18);
-            this.championsGB.Name = "championsGB";
-            this.championsGB.Size = new System.Drawing.Size(618, 96);
-            this.championsGB.TabIndex = 3;
-            this.championsGB.TabStop = false;
-            this.championsGB.Text = "&Get Frree Champion Rotation";
-            // 
-            // champRotationButton
-            // 
-            this.champRotationButton.Location = new System.Drawing.Point(226, 34);
-            this.champRotationButton.Name = "champRotationButton";
-            this.champRotationButton.Size = new System.Drawing.Size(142, 35);
-            this.champRotationButton.TabIndex = 12;
-            this.champRotationButton.Text = ">>";
-            this.champRotationButton.UseVisualStyleBackColor = true;
-            this.champRotationButton.Click += new System.EventHandler(this.champRotationButton_Click);
-            // 
-            // champRotationGB
-            // 
-            this.champRotationGB.Controls.Add(this.champRotationLB);
-            this.champRotationGB.Location = new System.Drawing.Point(30, 137);
-            this.champRotationGB.Name = "champRotationGB";
-            this.champRotationGB.Size = new System.Drawing.Size(297, 353);
-            this.champRotationGB.TabIndex = 4;
-            this.champRotationGB.TabStop = false;
-            this.champRotationGB.Text = "Free Champion Rotation";
-            // 
-            // champRotationNewPlayerGB
-            // 
-            this.champRotationNewPlayerGB.Controls.Add(this.champRotationNewPlayerLB);
-            this.champRotationNewPlayerGB.Location = new System.Drawing.Point(351, 137);
-            this.champRotationNewPlayerGB.Name = "champRotationNewPlayerGB";
-            this.champRotationNewPlayerGB.Size = new System.Drawing.Size(297, 353);
-            this.champRotationNewPlayerGB.TabIndex = 5;
-            this.champRotationNewPlayerGB.TabStop = false;
-            this.champRotationNewPlayerGB.Text = "Free Champion Rotation For Players < Level 10";
-            // 
-            // champRotationLB
-            // 
-            this.champRotationLB.FormattingEnabled = true;
-            this.champRotationLB.Location = new System.Drawing.Point(15, 20);
-            this.champRotationLB.Name = "champRotationLB";
-            this.champRotationLB.Size = new System.Drawing.Size(264, 316);
-            this.champRotationLB.TabIndex = 0;
-            // 
-            // champRotationNewPlayerLB
-            // 
-            this.champRotationNewPlayerLB.FormattingEnabled = true;
-            this.champRotationNewPlayerLB.Location = new System.Drawing.Point(16, 20);
-            this.champRotationNewPlayerLB.Name = "champRotationNewPlayerLB";
-            this.champRotationNewPlayerLB.Size = new System.Drawing.Size(264, 316);
-            this.champRotationNewPlayerLB.TabIndex = 1;
-            // 
-            // MainForm
+            // RiotAPI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 576);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainForm";
-            this.Text = "Main Form";
+            this.MaximizeBox = false;
+            this.Name = "RiotAPI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Riot API";
             this.tabControl.ResumeLayout(false);
             this.summonerTabPage.ResumeLayout(false);
             this.summonerInfroGroupBox.ResumeLayout(false);
@@ -880,11 +795,11 @@ namespace WinFormsRiotAPI
             this.matchGroupBox.ResumeLayout(false);
             this.matchGroupBox.PerformLayout();
             this.championTabPage.ResumeLayout(false);
+            this.champRotationNewPlayerGB.ResumeLayout(false);
+            this.champRotationGB.ResumeLayout(false);
+            this.championsGB.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.championsGB.ResumeLayout(false);
-            this.champRotationGB.ResumeLayout(false);
-            this.champRotationNewPlayerGB.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -898,8 +813,6 @@ namespace WinFormsRiotAPI
         private System.Windows.Forms.TabPage championTabPage;
         private System.Windows.Forms.GroupBox summonerGroupBox;
         private System.Windows.Forms.Label summerNameLabel;
-        private System.Windows.Forms.Label accountIDLabel;
-        private System.Windows.Forms.Label puuidLabel;
         private System.Windows.Forms.GroupBox summonerInfroGroupBox;
         private System.Windows.Forms.TextBox retrievedSummonerID;
         private System.Windows.Forms.Label summonerInformationIDLabel;
@@ -923,8 +836,6 @@ namespace WinFormsRiotAPI
         private System.Windows.Forms.ToolStripMenuItem riotDeveloperPortalToolStripMenuItem;
         private System.Windows.Forms.GroupBox matchGroupBox;
         private System.Windows.Forms.Label matchIDLabel;
-        private System.Windows.Forms.TextBox summonerAccIDTB;
-        private System.Windows.Forms.TextBox summonerIDTB;
         private System.Windows.Forms.TextBox summerNameInputTB;
         private System.Windows.Forms.Button summonerInputButton;
         private System.Windows.Forms.Label retrievedMatchesLabel;
@@ -934,13 +845,9 @@ namespace WinFormsRiotAPI
         private System.Windows.Forms.GroupBox retreivedMatchInfoGB;
         private System.Windows.Forms.ListBox teamOneListBox;
         private System.Windows.Forms.GroupBox teamTwoGroupBox;
-        private System.Windows.Forms.CheckBox teamTwoSurrenderCheck;
-        private System.Windows.Forms.CheckBox teamTwoWinCheck;
         private System.Windows.Forms.ListBox teamTwoListBox;
         private System.Windows.Forms.GroupBox teamOneGroupBox;
-        private System.Windows.Forms.CheckBox teamOneSurrenderCheck;
-        private System.Windows.Forms.CheckBox teamOneWinCheck;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox retrievedMatchTimeTB;
         private System.Windows.Forms.Label retreievedMatchTime;
         private System.Windows.Forms.TextBox retrievedMatchTypeTB;
         private System.Windows.Forms.Label retrievedMatchTypeLabel;
@@ -952,7 +859,7 @@ namespace WinFormsRiotAPI
         private System.Windows.Forms.TextBox teamTwoKillsTB;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox teamTwoSummonerNameTB;
+        private System.Windows.Forms.TextBox teamTwoLaneTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox teamOneAssistsTB;
         private System.Windows.Forms.TextBox teamOneDeathsTB;
@@ -962,8 +869,8 @@ namespace WinFormsRiotAPI
         private System.Windows.Forms.Label teamOneKillsLabel;
         private System.Windows.Forms.TextBox teamOneChampNameTB;
         private System.Windows.Forms.Label teamOneChampNameLabel;
-        private System.Windows.Forms.TextBox teamOneSummonerNameTB;
-        private System.Windows.Forms.Label teamOneSummonerNameLabel;
+        private System.Windows.Forms.TextBox teamOneLaneTB;
+        private System.Windows.Forms.Label teamOneLaneLabel;
         private System.Windows.Forms.GroupBox champRotationNewPlayerGB;
         private System.Windows.Forms.ListBox champRotationNewPlayerLB;
         private System.Windows.Forms.GroupBox champRotationGB;
