@@ -92,10 +92,10 @@ namespace WinFormsRiotAPI
             {   
                 if(counter < 5)
                 {
-                    teamOneListBox.Items.Add(summoner.championName);
+                    teamOneListBox.Items.Add(summoner.summonerName);
                 } else
                 {
-                    teamTwoListBox.Items.Add(summoner.championName);
+                    teamTwoListBox.Items.Add(summoner.summonerName);
                 }
                 counter++;
             }
@@ -106,7 +106,7 @@ namespace WinFormsRiotAPI
         {
             foreach(ExtraSummonerInfo summoner in matchData.participants)
             {
-                if(summoner.championName.Equals(teamOneListBox.SelectedItem))
+                if(summoner.summonerName.Equals(teamOneListBox.SelectedItem))
                 {
                     teamOneLaneTB.Text = summoner.lane;
                     teamOneChampNameTB.Text = summoner.championName;
@@ -122,7 +122,7 @@ namespace WinFormsRiotAPI
         {
             foreach (ExtraSummonerInfo summoner in matchData.participants)
             {
-                if (summoner.championName.Equals(teamTwoListBox.SelectedItem))
+                if (summoner.summonerName.Equals(teamTwoListBox.SelectedItem))
                 {
                     teamTwoLaneTB.Text = summoner.lane;
                     teamTwoChampNameTB.Text = summoner.championName;
